@@ -1,0 +1,11 @@
+
+#background {
+  display: none;
+ }
+body {
+   overflow: hidden;
+  }
+canvas{
+  z-index: -1;
+}
+#canvas { position: absolute; top: 0; left: 0;z-index: -1;}
