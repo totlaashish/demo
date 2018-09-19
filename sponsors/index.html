@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- handburger css -->
+		<link rel="stylesheet" type="text/css" href="handburger-css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="handburger-css/component.css" />
+
+		<!-- share css -->
+		<link rel="stylesheet" href="share.css">
+
+		<!-- handburger js -->
+		<script src="handburger-js/segment.min.js"></script>
+		<script src="handburger-js/ease.min.js"></script>
+
+    <style media="screen">
+    /* entire container, keeps perspective */
+.flip-container {
+perspective: 1000px;
+margin: 20px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+width: 300px;
+height: 300px;
+}
+
+/* flip speed goes here */
+.flipper {
+transition: 0.6s;
+transform-style: preserve-3d;
+position: relative;
+}
+.flipper>div>p{
+  font-size: 30px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+backface-visibility: hidden;
+
+position: absolute;
+top: 0;
+left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+z-index: 2;
+/* for firefox 31 */
+transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+transform: rotateY(180deg);
+}
+
+/* heading effect **/
+*{
+  padding: 0;
+  margin: 0;
+}
+body {
+    background-color: black;
+}
+
+.wrap{
+  height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.example-one {
+font-size: 100px;
+color: white;
+position: relative;
+margin-top: 50px;
+margin: 10px auto;
+padding-top: 2px;
+width: 500px;
+}
+@keyframes example-one-anim-1 {
+0% {
+  clip: rect(57px, 450px, 70px, 0);
+}
+5.88235% {
+  clip: rect(39px, 450px, 104px, 0);
+}
+11.76471% {
+  clip: rect(16px, 450px, 60px, 0);
+}
+17.64706% {
+  clip: rect(75px, 450px, 71px, 0);
+}
+23.52941% {
+  clip: rect(104px, 450px, 23px, 0);
+}
+29.41176% {
+  clip: rect(7px, 450px, 69px, 0);
+}
+35.29412% {
+  clip: rect(109px, 450px, 87px, 0);
+}
+41.17647% {
+  clip: rect(78px, 450px, 88px, 0);
+}
+47.05882% {
+  clip: rect(16px, 450px, 53px, 0);
+}
+52.94118% {
+  clip: rect(91px, 450px, 68px, 0);
+}
+58.82353% {
+  clip: rect(98px, 450px, 99px, 0);
+}
+64.70588% {
+  clip: rect(71px, 450px, 24px, 0);
+}
+70.58824% {
+  clip: rect(72px, 450px, 101px, 0);
+}
+76.47059% {
+  clip: rect(60px, 450px, 83px, 0);
+}
+82.35294% {
+  clip: rect(95px, 450px, 70px, 0);
+}
+88.23529% {
+  clip: rect(113px, 450px, 6px, 0);
+}
+94.11765% {
+  clip: rect(4px, 450px, 69px, 0);
+}
+100% {
+  clip: rect(67px, 450px, 80px, 0);
+}
+}
+@keyframes example-one-anim-2 {
+0% {
+  clip: rect(14px, 450px, 36px, 0);
+}
+5.88235% {
+  clip: rect(64px, 450px, 45px, 0);
+}
+11.76471% {
+  clip: rect(64px, 450px, 87px, 0);
+}
+17.64706% {
+  clip: rect(93px, 450px, 111px, 0);
+}
+23.52941% {
+  clip: rect(94px, 450px, 56px, 0);
+}
+29.41176% {
+  clip: rect(76px, 450px, 29px, 0);
+}
+35.29412% {
+  clip: rect(6px, 450px, 36px, 0);
+}
+41.17647% {
+  clip: rect(63px, 450px, 7px, 0);
+}
+47.05882% {
+  clip: rect(64px, 450px, 88px, 0);
+}
+52.94118% {
+  clip: rect(54px, 450px, 75px, 0);
+}
+58.82353% {
+  clip: rect(7px, 450px, 18px, 0);
+}
+64.70588% {
+  clip: rect(24px, 450px, 71px, 0);
+}
+70.58824% {
+  clip: rect(96px, 450px, 17px, 0);
+}
+76.47059% {
+  clip: rect(22px, 450px, 20px, 0);
+}
+82.35294% {
+  clip: rect(48px, 450px, 86px, 0);
+}
+88.23529% {
+  clip: rect(94px, 450px, 112px, 0);
+}
+94.11765% {
+  clip: rect(22px, 450px, 51px, 0);
+}
+100% {
+  clip: rect(16px, 450px, 113px, 0);
+}
+}
+.example-one:before, .example-one:after {
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+background: black;
+clip: rect(0, 0, 0, 0);
+}
+.example-one:after {
+left: 2px;
+text-shadow: -1px 0 red;
+animation: example-one-anim-1 2s infinite linear alternate-reverse;
+}
+.example-one:before {
+left: -2px;
+text-shadow: 2px 0 blue;
+animation: example-one-anim-2 3s infinite linear alternate-reverse;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content>div{
+  min-width: 200px;
+  text-align: center;
+}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+  <div class="example-one" data-text="Sponsors">Sponsors</div>
+  </div>
+  <div class="content">
+    <div class="flip-container"ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper" >
+		<div class="front" style="background-image:url('heroes-2.png');background-size:cover;background-position:center;">
+      <!-- front content -->
+		</div>
+		<div class="back"style="background-color: rebeccapurple;">
+			<!-- back content -->
+      <p>asfasdf</p>
+		</div>
+  </div>
+	</div>
+  <div class="flip-container"ontouchstart="this.classList.toggle('hover');">
+<div class="flipper" >
+  <div class="front" style="background-color: rgba(200,20,63,1);">
+    <!-- front content -->
+  </div>
+  <div class="back"style="background-color: rebeccapurple;">
+    <!-- back content -->
+    <p>asfasdf</p>
+  </div>
+</div>
+</div>
+<div class="flip-container"ontouchstart="this.classList.toggle('hover');">
+<div class="flipper" >
+<div class="front" style="background-image:url('heroes-2.png');background-size:cover;background-position:center;">
+  <!-- front content -->
+</div>
+<div class="back"style="background-color: rebeccapurple;">
+  <!-- back content -->
+  <p>asfasdf</p>
+</div>
+</div>
+</div>
+<div class="flip-container"ontouchstart="this.classList.toggle('hover');">
+<div class="flipper" >
+<div class="front" style="background-color: rgba(200,20,63,1);">
+<!-- front content -->
+</div>
+<div class="back"style="background-color: rebeccapurple;">
+<!-- back content -->
+<p>asfasdf</p>
+</div>
+</div>
+</div>
+<div class="flip-container"ontouchstart="this.classList.toggle('hover');">
+<div class="flipper" >
+<div class="front" style="background-image:url('heroes-2.png');background-size:cover;background-position:center;">
+  <!-- front content -->
+</div>
+<div class="back"style="background-color: rebeccapurple;">
+  <!-- back content -->
+  <p>asfasdf</p>
+</div>
+</div>
+</div>
+<div class="flip-container"ontouchstart="this.classList.toggle('hover');">
+<div class="flipper" >
+<div class="front" style="background-color: rgba(200,20,63,1);">
+<!-- front content -->
+</div>
+<div class="back"style="background-color: rebeccapurple;">
+<!-- back content -->
+<p>asfasdf</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- handburger -->
+<div class="container" style="position:absolute;top:0;">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: hidden">
+          <svg width="1000px" height="1000px">
+            <path id="pathA" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path id="pathB" d="M 300 500 L 700 500"></path>
+            <path id="pathC" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div><!-- menu-icon-wrapper -->
+        <div id="dummy" class="dummy">
+          <div class="dummy__item"><a style="cursor:pointer;" href="../rainyday.js%20demo%20%231_files/rainyday.js%20demo%20%231_files.html">HOME</a></div>
+          <div class="dummy__item"><a style="cursor:pointer;" href="../events/index.html">EVENTS</a></div>
+          <div class="dummy__item"><a style="cursor:pointer;" href="../gallery/index.html">GALLERY</a></div>
+          <div class="dummy__item"><a style="cursor:pointer;" href="../contact/contact.html">CONTACT</a></div>
+          <div class="dummy__item"><a style="cursor:pointer;" href="../schedule1/schedule.html">SCHEDULE</a></div>
+          <div class="dummy__item"><a style="cursor:pointer;" href="../sponsors/index.html">SPONSORS</a></div>
+        </div>
+</div>
+<!-- handburger ends -->
+
+<!-- share button -->
+<div class="menu-button" style="position:fixed;"><i class="zmdi zmdi-share"><img src="file:///home/ashish/Desktop/viva-demo/image2.png" style="width:50px;padding-top:5px;" alt=""></i>
+  <a href="#"><i class="zmdi zmdi-twitter"><img src="file:///home/ashish/Documents/web-documents/csi-blog/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
+  <a href="#"><i class="zmdi zmdi-google-plus"><img src="file:///home/ashish/Downloads/image(4).png" alt="" style="width:40px;padding-top:5px;" ></i></a>
+  <a href="#"><i class="zmdi zmdi-codepen"><img src="file:///home/ashish/Downloads/image(5).png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
+</div>
+<!-- end of share button -->
+
+<!-- handburger js -->
+<script src="handburger-js/main.js"></script>
+
+  </body>
+</html>
