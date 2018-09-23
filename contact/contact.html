@@ -9,6 +9,13 @@
 		<!-- share css -->
 		<link rel="stylesheet" href="share.css">
 
+		<script>
+			function demo() {
+				var load = document.getElementById("load");
+				load.style.display="none";
+			}
+		</script>
+
 		<!-- handburger js -->
 		<script src="handburger-js/segment.min.js"></script>
 		<script src="handburger-js/ease.min.js"></script>
@@ -240,7 +247,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="demo();">
   <div class="wrap">
 <div class="example-one" data-text="Contact">Contact</div>
 </div>
@@ -303,13 +310,13 @@
   </div>
   <!-- handburger ends -->
 
-  <!-- share button -->
-  <div class="menu-button" style="position:fixed;"><i class="zmdi zmdi-share"><img src="file:///home/ashish/Desktop/viva-demo/image2.png" style="width:50px;padding-top:5px;" alt=""></i>
-    <a href="#"><i class="zmdi zmdi-twitter"><img src="file:///home/ashish/Documents/web-documents/csi-blog/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
-    <a href="#"><i class="zmdi zmdi-google-plus"><img src="file:///home/ashish/Downloads/image(4).png" alt="" style="width:40px;padding-top:5px;" ></i></a>
-    <a href="#"><i class="zmdi zmdi-codepen"><img src="file:///home/ashish/Downloads/image(5).png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
+  <!-- share button
+  <div class="menu-button"><i class="zmdi zmdi-share"><img src="img/share.png" style="width:50px;padding-top:5px;" alt=""></i>
+    <a href="https://twitter.com/meri_tempest"><i class="zmdi zmdi-twitter"><img src="img/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
+    <a href="https://facebook.com/profile.php?id=271940319489541&ref=content_filter"><i class="zmdi zmdi-google-plus"><img src="img/youtube.png" alt="" style="width:40px;padding-top:5px;" ></i></a>
+    <a href="https://www.youtube.com/channel/UCpEqKW6XaSJ3i-DrJEUDRhQ"><i class="zmdi zmdi-codepen"><img src="img/facebook.png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
   </div>
-  <!-- end of share button -->
+   end of share button -->
 
     <script src="sticker.min.js"></script>
 

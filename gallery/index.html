@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Scattered Polaroids Gallery</title>
+		<title>Gallery</title>
 		<meta name="description" content="Scattered Polaroids Gallery: A flat-style take on a Polaroid gallery" />
 		<meta name="keywords" content="scattered polaroids, image gallery, javascript, random rotation, 3d, backface, flat design" />
 		<meta name="author" content="Codrops" />
@@ -21,12 +21,36 @@
 		<!-- share css -->
 		<link rel="stylesheet" href="share.css">
 
+		<style media="screen">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+
+		<script>
+			function demo() {
+				var load = document.getElementById("load");
+				load.style.display="none";
+			}
+		</script>
+
+		<style media="screen">
+			img{
+				width: 100%;
+			}
+		</style>
+
 		<!-- handburger js -->
 		<script src="handburger-js/segment.min.js"></script>
 		<script src="handburger-js/ease.min.js"></script>
 
 	</head>
-	<body>
+	<body onload="demo();">
+		<div class="preloader" id="load" style="width:100%; height:100vh;background-color:#62b849;z-index:100000;position:absolute;">
+			<img src="img/preload.gif" style="z-index: 10000;position: absolute;top: 50%;left: 50%;margin-top: -112px;margin-left: -150px;width: 300px;">
+			<p style="z-index: 1000000;position: absolute;top: 70%;left: 45%;">Loading....</p>
+		</div>
 		<div class="container">
 			<!-- Top Navigation -->
 
@@ -58,84 +82,53 @@
 						</figcaption>
 					</figure>
 					<figure>
-						<a href="" class="photostack-img"><img src="img/4.jpg" alt="img04"/></a>
+						<a href="" class="photostack-img"><img src="img/4.jpg" alt="img01"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Serenity Beach</h2>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/5.jpg" alt="img02"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Happy Days</h2>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/6.jpg" alt="img03"/></a>
+						<figcaption>
+							<h2 class="photostack-title">Beautywood</h2>
+						</figcaption>
+					</figure>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/7.jpg" alt="img04"/></a>
 						<figcaption>
 							<h2 class="photostack-title">Heaven of time</h2>
 						</figcaption>
 					</figure>
 					<figure>
-						<a href="" class="photostack-img"><img src="img/5.jpg" alt="img05"/></a>
+						<a href="" class="photostack-img"><img src="img/8.jpg" alt="img05"/></a>
 						<figcaption>
 							<h2 class="photostack-title">Speed Racer</h2>
 						</figcaption>
 					</figure>
 					<figure>
-						<a href="" class="photostack-img"><img src="img/6.jpg" alt="img06"/></a>
+						<a href="" class="photostack-img"><img src="img/9.jpg" alt="img06"/></a>
 						<figcaption>
 							<h2 class="photostack-title">Forever this</h2>
 						</figcaption>
 					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/7.jpg" alt="img07"/></a>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/10.jpg" alt="img04"/></a>
 						<figcaption>
-							<h2 class="photostack-title">Lovely Green</h2>
+							<h2 class="photostack-title">Heaven of time</h2>
 						</figcaption>
 					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/8.jpg" alt="img08"/></a>
+					<figure>
+						<a href="" class="photostack-img"><img src="img/11.jpg" alt="img05"/></a>
 						<figcaption>
-							<h2 class="photostack-title">Wonderful</h2>
+							<h2 class="photostack-title">Speed Racer</h2>
 						</figcaption>
 					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/9.jpg" alt="img09"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Love Addict</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/10.jpg" alt="img10"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Friendship</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/11.jpg" alt="img11"/></a>
-						<figcaption>
-							<h2 class="photostack-title">White Nights</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/12.jpg" alt="img12"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Serendipity</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/13.jpg" alt="img13"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Pure Soul</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/14.jpg" alt="img14"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Winds of Peace</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/15.jpg" alt="img15"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Shades of blue</h2>
-						</figcaption>
-					</figure>
-					<figure data-dummy>
-						<a href="#" class="photostack-img"><img src="img/16.jpg" alt="img16"/></a>
-						<figcaption>
-							<h2 class="photostack-title">Lightness</h2>
-						</figcaption>
-					</figure>
-				</div>
 
 			</section>
 			<!-- handburger -->
@@ -159,13 +152,13 @@
 			</div>
 			<!-- handburger ends -->
 
-			<!-- share button -->
-			<div class="menu-button"><i class="zmdi zmdi-share"><img src="file:///home/ashish/Desktop/viva-demo/image2.png" style="width:50px;padding-top:5px;" alt=""></i>
-				<a href="#"><i class="zmdi zmdi-twitter"><img src="file:///home/ashish/Documents/web-documents/csi-blog/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
-				<a href="#"><i class="zmdi zmdi-google-plus"><img src="file:///home/ashish/Downloads/image(4).png" alt="" style="width:40px;padding-top:5px;" ></i></a>
-				<a href="#"><i class="zmdi zmdi-codepen"><img src="file:///home/ashish/Downloads/image(5).png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
+			<!-- share button
+			<div class="menu-button"><i class="zmdi zmdi-share"><img src="img/share.png" style="width:50px;padding-top:5px;" alt=""></i>
+				<a href="https://twitter.com/meri_tempest"><i class="zmdi zmdi-twitter"><img src="img/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
+				<a href="https://facebook.com/profile.php?id=271940319489541&ref=content_filter"><i class="zmdi zmdi-google-plus"><img src="img/youtube.png" alt="" style="width:40px;padding-top:5px;" ></i></a>
+				<a href="https://www.youtube.com/channel/UCpEqKW6XaSJ3i-DrJEUDRhQ"><i class="zmdi zmdi-codepen"><img src="img/facebook.png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
 			</div>
-			<!-- end of share button -->
+			 end of share button -->
 
 
 		</div><!-- /container -->

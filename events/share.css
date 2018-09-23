@@ -122,3 +122,12 @@ padding: 15px;
 font-size: 25px;
 }
 }
+@media screen and (max-width: 500px) {
+.menu-button{
+  transform: scale(.7);
+  -webkit-trasnsform:scale(.7);
+  -moz-trasnsform:scale(.7);
+  right: 10px;
+  bottom: 10px;
+}
+}

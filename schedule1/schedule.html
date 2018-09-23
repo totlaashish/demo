@@ -12,12 +12,30 @@
 		<!-- share css -->
 		<link rel="stylesheet" href="share.css">
 
+    <style media="screen">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+
+		<script>
+			function demo() {
+				var load = document.getElementById("load");
+				load.style.display="none";
+			}
+		</script>
+
 		<!-- handburger js -->
 		<script src="handburger-js/segment.min.js"></script>
 		<script src="handburger-js/ease.min.js"></script>
 
   </head>
-  <body>
+  <body onload="demo();">
+		<div class="preloader" id="load" style="width:100%; height:100vh;background-color:#62b849;z-index:100000;position:absolute;">
+			<img src="img/preload.gif" style="z-index: 10000;position: absolute;top: 50%;left: 50%;margin-top: -112px;margin-left: -150px;width: 300px;">
+			<p style="z-index: 1000000;position: absolute;top: 70%;left: 45%;">Loading....</p>
+		</div>
     <header>
   <div class="container text-center">
     <h1>Event Timeline</h1>
@@ -165,13 +183,13 @@
 </div>
 <!-- handburger ends -->
 
-<!-- share button -->
-<div class="menu-button"><i class="zmdi zmdi-share"><img src="file:///home/ashish/Desktop/viva-demo/image2.png" style="width:50px;padding-top:5px;" alt=""></i>
-  <a href="#"><i class="zmdi zmdi-twitter"><img src="file:///home/ashish/Documents/web-documents/csi-blog/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
-  <a href="#"><i class="zmdi zmdi-google-plus"><img src="file:///home/ashish/Downloads/image(4).png" alt="" style="width:40px;padding-top:5px;" ></i></a>
-  <a href="#"><i class="zmdi zmdi-codepen"><img src="file:///home/ashish/Downloads/image(5).png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
+<!-- share button
+<div class="menu-button"><i class="zmdi zmdi-share"><img src="img/share.png" style="width:50px;padding-top:5px;" alt=""></i>
+  <a href="https://twitter.com/meri_tempest"><i class="zmdi zmdi-twitter"><img src="img/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
+  <a href="https://facebook.com/profile.php?id=271940319489541&ref=content_filter"><i class="zmdi zmdi-google-plus"><img src="img/youtube.png" alt="" style="width:40px;padding-top:5px;" ></i></a>
+  <a href="https://www.youtube.com/channel/UCpEqKW6XaSJ3i-DrJEUDRhQ"><i class="zmdi zmdi-codepen"><img src="img/facebook.png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
 </div>
-<!-- end of share button -->
+end of share button -->
 
 <!-- handburger js -->
 <script src="handburger-js/main.js"></script>

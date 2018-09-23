@@ -17,13 +17,32 @@
 		<!-- share css -->
 		<link rel="stylesheet" href="share.css">
 
+		<style media="screen">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+
+		<script>
+			function demo() {
+				var load = document.getElementById("load");
+				load.style.display="none";
+			}
+		</script>
+
 		<!-- handburger js -->
 		<script src="handburger-js/segment.min.js"></script>
 		<script src="handburger-js/ease.min.js"></script>
 
-	</head>
-	<body class="demo-1 loading">
 
+
+	</head>
+	<body onload="demo();" class="demo-1 loading">
+		<div class="preloader" id="load" style="width:100%; height:100vh;background-color:#62b849;z-index:100000;position:absolute;">
+			<img src="img/preload.gif" style="z-index: 10000;position: absolute;top: 50%;left: 50%;margin-top: -112px;margin-left: -150px;width: 300px;">
+			<p style="z-index: 1000000;position: absolute;top: 70%;left: 45%;">Loading....</p>
+		</div>
 		<main>
 			<div class="morph-wrap">
 				<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
@@ -33,55 +52,229 @@
 
 			<div class="content-wrap" style="background-color:rgba(0,0,0,.8)">
 				<div class="content content--layout content--layout-1">
-					<img class="content__img" src="img/1.jpg" alt="Some image" />
-					<h3 class="content__title">events</h3>
-					<p class="content__desc">Finding the heart when paradise is lost.</p>
+					<img class="content__img" src="img/event.jpg" alt="Some image" />
+					<h3 class="content__title">Events</h3>
+					<p class="content__desc"></p>
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#bunch">Bunch</a></li>
-						<li><a href="#found">Found</a></li>
-						<li><a href="#east">East</a></li>
-						<li><a href="#frank">Frank</a></li>
-						<li><a href="#west">West</a></li>
+						<li><a href="#sports">Sports</a></li>
+						<li><a href="#tech">Tech</a></li>
+						<li><a href="#cultural">Cultural</a></li>
 					</ul>
 				</nav>
 			</div>
-			<div class="content-wrap" id="bunch">
+			<div class="content-wrap" id="sports">
 				<div class="content content--layout content--layout-2">
-					<img class="content__img" src="img/4.jpg" alt="Some image" />
-					<h3 class="content__title">bunch</h3>
-					<p class="content__desc">The neverending quest, once and forever.</p>
+					<img class="content__img" src="img/chess.jpg" alt="Some image" />
+					<h3 class="content__title">Chess</h3>
+					<p class="content__desc"><a href="#" target="blank">Rules</a></p>
 				</div>
 			</div>
-			<div class="content-wrap" id="found">
+			<div class="content-wrap" id="">
 				<div class="content content--layout content--layout-3">
-					<img class="content__img" src="img/3.jpg" alt="Some image" />
-					<h3 class="content__title">found</h3>
-					<p class="content__desc">Lost or found? That's the question today.</p>
+					<img class="content__img" src="img/hockey.jpg" alt="Some image" />
+					<h3 class="content__title">Hockey</h3>
+					<p class="content__desc"><a href="rules/hockey.pdf" target="blank">Rules</a></p>
 				</div>
 			</div>
-			<div class="content-wrap" id="east">
+			<div class="content-wrap" id="">
 				<div class="content content--layout content--layout-4">
-					<img class="content__img" src="img/2.jpg" alt="Some image" />
-					<h3 class="content__title">east</h3>
-					<p class="content__desc">The outer bounds of the world, from within.</p>
+					<img class="content__img" src="img/cricket.jpg" alt="Some image" />
+					<h3 class="content__title">Cricket</h3>
+					<p class="content__desc"><a href="rules/cricket.pdf" target="blank">Rules</a></p>
 				</div>
 			</div>
-			<div class="content-wrap" id="frank">
+			<div class="content-wrap" id="">
 				<div class="content content--layout content--layout-1">
-					<img class="content__img" src="img/5.jpg" alt="Some image" />
-					<h3 class="content__title">frank</h3>
-					<p class="content__desc">Frank's work and nothing more.</p>
+					<img class="content__img" src="img/football.jpg" alt="Some image" />
+					<h3 class="content__title">Football</h3>
+					<p class="content__desc"><a href="#" target="blank">Rules</a></p>
 				</div>
 			</div>
-			<div class="content-wrap" id="west">
+			<div class="content-wrap" id="">
 				<div class="content content--layout content--layout-2">
-					<img class="content__img" src="img/5.jpg" alt="Some image" />
-					<h3 class="content__title">west</h3>
-					<p class="content__desc">Frank's work and nothing more.</p>
+					<img class="content__img" src="img/swimming.jpg" alt="Some image" />
+					<h3 class="content__title">Swimming</h3>
+					<p class="content__desc"><a href="#" target="blank">Rules</a></p>
 				</div>
 			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-2">
+					<img class="content__img" src="img/volleyball.jpg" alt="Some image" />
+					<h3 class="content__title">Volleyball</h3>
+					<p class="content__desc"><a href="rules/volleball.pdf" target="blank">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-3">
+					<img class="content__img" src="img/badminton.jpg" alt="Some image" />
+					<h3 class="content__title">Badminton</h3>
+					<p class="content__desc"><a href="rules/badminton.docx" target="blank">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/basketball.jpg" alt="Some image" />
+					<h3 class="content__title">Basketball</h3>
+					<p class="content__desc"><a href="rules/basketball.pdf" target="blank">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/tabletennis.jpg" alt="Some image" />
+					<h3 class="content__title">Table-Tennis</h3>
+					<p class="content__desc"><a href="#" target="blank">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="tech">
+				<div class="content content--layout content--layout-2">
+					<img class="content__img" src="img/botball.jpg" alt="Some image" />
+					<h3 class="content__title">Botball</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-2">
+					<img class="content__img" src="img/liftoff.jpg" alt="Some image" />
+					<h3 class="content__title">Lift Off</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-3">
+					<img class="content__img" src="img/lamarina.jpg" alt="Some image" />
+					<h3 class="content__title">La Marina</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/cessetignis.jpg" alt="Some image" />
+					<h3 class="content__title">Cesset Ignis</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/talkatech.jpg" alt="Some image" />
+					<h3 class="content__title">Talk-A-Tech</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/beatthetrail.jpg" alt="Some image" />
+					<h3 class="content__title">Beat-The-Trail</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-3">
+					<img class="content__img" src="img/dredgertreasure.jpg" alt="Some image" />
+					<h3 class="content__title">Dredger Treasure</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/exposiciondeciencia.jpg" alt="Some image" />
+					<h3 class="content__title">Explosicion-De-Ciencia</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/modelodefabricacion.jpg" alt="Some image" />
+					<h3 class="content__title">Modelo-De-Fabricacion</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/icengine.jpg" alt="Some image" />
+					<h3 class="content__title">IC Engine</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-2">
+					<img class="content__img" src="img/autocad.jpg" alt="Some image" />
+					<h3 class="content__title">Autocad</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="cultural">
+				<div class="content content--layout content--layout-3">
+					<img class="content__img" src="img/sargam.jpg" alt="Some image" />
+					<h3 class="content__title">Sargam</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-2">
+					<img class="content__img" src="img/theatriks.jpg" alt="Some image" />
+					<h3 class="content__title">Theatriks</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/razzmataz.jpg" alt="Some image" />
+					<h3 class="content__title">Razz-Matazz</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-3">
+					<img class="content__img" src="img/stampede1.jpg" alt="Some image" />
+					<h3 class="content__title">Stampede</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/mrmarine.jpg" alt="Some image" />
+					<h3 class="content__title">Mr. Marine</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/kolkatasgottalent.jpg" alt="Some image" />
+					<h3 class="content__title">Kolkata's Got Talent</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-2">
+					<img class="content__img" src="img/hoedown.jpg" alt="Some image" />
+					<h3 class="content__title">Hoedown</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-3">
+					<img class="content__img" src="img/thestreet.jpg" alt="Some image" />
+					<h3 class="content__title">The Street</h3>
+					<p class="content__desc"><a href="#">Rules</a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-4">
+					<img class="content__img" src="img/jaspreet.jpg" alt="Some image" />
+					<h3 class="content__title">"Jaspreet Singh"</h3>
+					<p class="content__desc"><a href="#"></a></p>
+				</div>
+			</div>
+			<div class="content-wrap" id="">
+				<div class="content content--layout content--layout-1">
+					<img class="content__img" src="img/djnight.jpg" alt="Some image" />
+					<h3 class="content__title">Dj Night</h3>
+					<p class="content__desc"><a href="#"></a></p>
+				</div>
+			</div>
+
 			<!-- Related demos -->
 			<section class="content content--related" style="height:0px;display:none;">
 
@@ -108,13 +301,13 @@
 			</div>
 			<!-- handburger ends -->
 
-			<!-- share button -->
-			<div class="menu-button"><i class="zmdi zmdi-share"><img src="file:///home/ashish/Desktop/viva-demo/image2.png" style="width:50px;padding-top:5px;" alt=""></i>
-				<a href="#"><i class="zmdi zmdi-twitter"><img src="file:///home/ashish/Documents/web-documents/csi-blog/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
-				<a href="#"><i class="zmdi zmdi-google-plus"><img src="file:///home/ashish/Downloads/image(4).png" alt="" style="width:40px;padding-top:5px;" ></i></a>
-				<a href="#"><i class="zmdi zmdi-codepen"><img src="file:///home/ashish/Downloads/image(5).png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
+			<!-- share button
+			<div class="menu-button"><i class="zmdi zmdi-share"><img src="img/share.png" style="width:50px;padding-top:5px;" alt=""></i>
+				<a href="https://twitter.com/meri_tempest"><i class="zmdi zmdi-twitter"><img src="img/twitter.png" alt="" style="width:40px;padding-top:5px;"></i></a>
+				<a href="https://facebook.com/profile.php?id=271940319489541&ref=content_filter"><i class="zmdi zmdi-google-plus"><img src="img/youtube.png" alt="" style="width:40px;padding-top:5px;" ></i></a>
+				<a href="https://www.youtube.com/channel/UCpEqKW6XaSJ3i-DrJEUDRhQ"><i class="zmdi zmdi-codepen"><img src="img/facebook.png" alt="" style="width:40px;padding-top:5px;"></i>	</a>
 			</div>
-			<!-- end of share button -->
+			 end of share button -->
 
 		</main>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
